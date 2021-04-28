@@ -9,10 +9,10 @@ const controller = {
             res.status(400).send(err)
         }
     },
-
+        // Ejemplo populate anidado: .populate({path:'childs', populate:{path:'parents'}})
     read: async (req, res) => {
         try{
-            const items = await parent.find({})  
+            const items = await parent.find({}).populate(['childs'])
             res.send(items)
         }catch(err){
             res.status(400).send(err)
@@ -21,7 +21,7 @@ const controller = {
 
     readById: async (req, res) => {
         try{
-            const item = await parent.findById(req.params.id)  
+            const item = await parent.findById(req.params.id).populate(['childs'])
             return !item ? res.sendStatus(404) : res.send(item);
         }catch(err){
             res.status(400).send(err)
@@ -30,7 +30,7 @@ const controller = {
 
     updateById: async (req, res) => {
         try{
-            const item = await parent.findByIdAndUpdate(req.params.id, req.body, {new: true}) // {new: true} -> Trae el objeto ya actualizado
+            const item = await parent.findByIdAndUpdate(req.params.id, req.body, {new: true}).populate(['childs']) // {new: true} -> Trae el objeto ya actualizado
             return !item ? res.sendStatus(404) : res.send(item);
         }catch(err){
             res.status(400).send(err)
