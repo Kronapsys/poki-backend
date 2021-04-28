@@ -1,5 +1,5 @@
 const parentRoutes = require('./parents');
 const teacherRoutes = require('./teachers');
-const childRouters = require('./child');
+const childRoutes = require('./child');
 
-module.exports = {parentRoutes, teacherRoutes, childRouters};
+module.exports = {parentRoutes, teacherRoutes, childRoutes};

@@ -3,7 +3,7 @@ const child = require('../models/Child');
 const controller = { 
     create: async (req, res) => {
         try{
-            const item = await parent.child(req.body)
+            const item = await child.create(req.body)
             res.send(item)
         }catch(err){
             res.status(400).send(err)
