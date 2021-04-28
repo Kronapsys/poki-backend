@@ -3,11 +3,6 @@ const Schema = mongoose.Schema;
 
 const LackOfAssistanceSchema = new Schema({
 
-    name: {
-        type: String,
-        required: true
-    },
-
     childs: [{
         type: Schema.Types.ObjectId,
         ref: 'Child'

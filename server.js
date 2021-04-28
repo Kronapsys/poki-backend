@@ -13,6 +13,7 @@ app.use(express.json()); // Fuerza que todo sea tipo json
 routerConfig(app, '/parents', routes.parentRoutes);
 routerConfig(app, '/teachers', routes.teacherRoutes);
 routerConfig(app, '/childs', routes.childRoutes);
+routerConfig(app, '/lacks-of-assistance', routes.lack_of_assistanceRouter);
 
 const port = 3000;
 app.listen(port, ()=> {
