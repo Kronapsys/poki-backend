@@ -10,7 +10,9 @@ app.use(morgan('dev')); // Utilizamos el middleware de morgan (nos trae informac
 app.use(express.json()); // Fuerza que todo sea tipo json
 
 routerConfig(app, '/parents', routes.parentRoutes);
+routerConfig(app, '/teachers', routes.teacherRoutes);
 
-app.listen(3000, ()=> {
-    console.log('Server listen on port: 3000')
+const port = 3000;
+app.listen(port, ()=> {
+    console.log('Server listen on port: ' + `${port}`)
 });
