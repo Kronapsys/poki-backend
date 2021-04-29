@@ -15,6 +15,8 @@ routerConfig(app, '/teachers', routes.teacherRoutes);
 routerConfig(app, '/childs', routes.childRoutes);
 routerConfig(app, '/lacks-of-assistance', routes.lack_of_assistanceRoutes);
 routerConfig(app, '/lacks-of-assistance-type', routes.lack_of_assistance_typeRoutes);
+routerConfig(app, '/allergies', routes.allergyRoutes);
+routerConfig(app, '/allergies-type', routes.allergy_typeRoutes);
 
 const port = 3000;
 app.listen(port, ()=> {
