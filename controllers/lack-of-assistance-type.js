@@ -12,7 +12,7 @@ const controller = {
         
     read: async (req, res) => {
         try{
-            const items = await lack_of_assistance_type.find({}).populate(['childs'])
+            const items = await lack_of_assistance_type.find({})
             res.send(items)
         }catch(err){
             res.status(400).send(err)
@@ -21,7 +21,7 @@ const controller = {
 
     readById: async (req, res) => {
         try{
-            const item = await lack_of_assistance_type.findById(req.params.id).populate(['childs'])
+            const item = await lack_of_assistance_type.findById(req.params.id)
             return !item ? res.sendStatus(404) : res.send(item);
         }catch(err){
             res.status(400).send(err)
@@ -31,7 +31,6 @@ const controller = {
     updateById: async (req, res) => {
         try{
             const item = await lack_of_assistance_type.findByIdAndUpdate(req.params.id, req.body, {new: true}) // {new: true} -> Trae el objeto ya actualizado
-            .populate(['childs']) 
             return !item ? res.sendStatus(404) : res.send(item);
         }catch(err){
             res.status(400).send(err)

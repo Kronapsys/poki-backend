@@ -10,7 +10,7 @@ const LackOfAssistanceTypeSchema = new Schema({
 
 });
 
-ParentSchema.set('toJSON', {
+LackOfAssistanceTypeSchema.set('toJSON', {
     transform: (doc, obj) => {
         obj.id = obj._id
         delete obj._id
