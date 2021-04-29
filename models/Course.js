@@ -1,21 +1,16 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const AllergySchema = new Schema({
+const CourseSchema = new Schema({
 
     name: {
         type: String,
         required: true
-    },
-
-    type: [{
-        type: Schema.Types.ObjectId,
-        ref: 'AllergyType'
-    }]
+    }
 
 });
 
-AllergySchema.set('toJSON', {
+CourseSchema.set('toJSON', {
     transform: (doc, obj) => {
         obj.id = obj._id
         delete obj._id
@@ -24,4 +19,4 @@ AllergySchema.set('toJSON', {
     }
 });
 
-module.exports = mongoose.model('Allergy', AllergySchema);
+module.exports = mongoose.model('Course', CourseSchema);
