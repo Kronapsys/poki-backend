@@ -8,7 +8,10 @@ const allergy_typeRoutes = require('./allergies-type');
 const classroomRoutes = require('./classrooms');
 const courseRoutes = require('./courses');
 const eventRoutes = require('./events');
+const food_reportRoutes = require('./food-reports');
+const food_report_typeRoutes = require('./food-reports-type');
 
 module.exports = {parentRoutes, teacherRoutes, childRoutes, lack_of_assistanceRoutes,
                   lack_of_assistance_typeRoutes, allergyRoutes, allergy_typeRoutes,
-                  classroomRoutes, courseRoutes, eventRoutes};
+                  classroomRoutes, courseRoutes, eventRoutes, food_reportRoutes,
+                  food_report_typeRoutes};

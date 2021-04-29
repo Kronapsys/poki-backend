@@ -20,6 +20,8 @@ routerConfig(app, '/allergies-type', routes.allergy_typeRoutes);
 routerConfig(app, '/classrooms', routes.classroomRoutes);
 routerConfig(app, '/courses', routes.courseRoutes);
 routerConfig(app, '/events', routes.eventRoutes);
+routerConfig(app, '/food-reports', routes.food_reportRoutes);
+routerConfig(app, '/food-reports-type', routes.food_report_typeRoutes);
 
 const port = 3000;
 app.listen(port, ()=> {
