@@ -22,6 +22,9 @@ routerConfig(app, '/courses', routes.courseRoutes);
 routerConfig(app, '/events', routes.eventRoutes);
 routerConfig(app, '/food-reports', routes.food_reportRoutes);
 routerConfig(app, '/food-reports-type', routes.food_report_typeRoutes);
+routerConfig(app, '/incidents-report', routes.incident_reportRoutes);
+routerConfig(app, '/incidents-report-type', routes.incident_report_typeRoutes);
+
 
 const port = 3000;
 app.listen(port, ()=> {
