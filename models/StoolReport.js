@@ -18,10 +18,6 @@ const StoolReportSchema = new Schema({
         ref: 'StoolReportColor'
     }],
 
-    constipation: {
-        type: Boolean,
-    },
-
     blood: {
         type: Boolean,
     },
