@@ -24,6 +24,8 @@ routerConfig(app, '/food-reports', routes.food_reportRoutes);
 routerConfig(app, '/food-reports-type', routes.food_report_typeRoutes);
 routerConfig(app, '/incidents-report', routes.incident_reportRoutes);
 routerConfig(app, '/incidents-report-type', routes.incident_report_typeRoutes);
+routerConfig(app, '/medicines', routes.medicineRoutes);
+routerConfig(app, '/medicines-type', routes.medicine_typeRoutes);
 
 
 const port = 3000;
