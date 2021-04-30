@@ -23,10 +23,10 @@ const MedicineSchema = new Schema({
         required: true
     },  
 
-    time: {
+    time: [{
         type: Date,
         required: true
-    },
+    }],
 
     type: [{
         type: Schema.Types.ObjectId,
