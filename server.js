@@ -26,6 +26,9 @@ routerConfig(app, '/incidents-report', routes.incident_reportRoutes);
 routerConfig(app, '/incidents-report-type', routes.incident_report_typeRoutes);
 routerConfig(app, '/medicines', routes.medicineRoutes);
 routerConfig(app, '/medicines-type', routes.medicine_typeRoutes);
+routerConfig(app, '/stools-report', routes.stool_reportRoutes);
+routerConfig(app, '/stools-report-type', routes.stool_report_typeRoutes);
+routerConfig(app, '/stools-report-color', routes.stool_report_colorRoutes);
 
 
 const port = 3000;
