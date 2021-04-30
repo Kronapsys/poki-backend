@@ -1,18 +1,18 @@
-const parent = require('../models/Parent');
+const medicine = require('../models/Medicine');
 
 const controller = { 
     create: async (req, res) => {
         try{
-            const item = await parent.create(req.body)
+            const item = await medicine.create(req.body)
             res.send(item)
         }catch(err){
             res.status(400).send(err)
         }
     },
-        // Ejemplo populate anidado: .populate({path:'childs', populate:{path:'parents'}})
+        
     read: async (req, res) => {
         try{
-            const items = await parent.find({}).populate(['childs'])
+            const items = await medicine.find({}).populate(['medicines-type'])
             res.send(items)
         }catch(err){
             res.status(400).send(err)
@@ -21,7 +21,7 @@ const controller = {
 
     readById: async (req, res) => {
         try{
-            const item = await parent.findById(req.params.id).populate(['childs'])
+            const item = await medicine.findById(req.params.id).populate(['medicines-type'])
             return !item ? res.sendStatus(404) : res.send(item);
         }catch(err){
             res.status(400).send(err)
@@ -30,8 +30,8 @@ const controller = {
 
     updateById: async (req, res) => {
         try{
-            const item = await parent.findByIdAndUpdate(req.params.id, req.body, {new: true}) // {new: true} -> Trae el objeto ya actualizado
-            .populate(['childs']) 
+            const item = await medicine.findByIdAndUpdate(req.params.id, req.body, {new: true}) // {new: true} -> Trae el objeto ya actualizado
+            .populate(['medicines-type']) 
             return !item ? res.sendStatus(404) : res.send(item);
         }catch(err){
             res.status(400).send(err)
@@ -40,7 +40,7 @@ const controller = {
 
     deleteById: async (req, res) => {
         try{
-            const item = await parent.findByIdAndDelete(req.params.id)
+            const item = await medicine.findByIdAndDelete(req.params.id)
             return !item ? res.sendStatus(404) : res.sendStatus(200);
         }catch(err){
             res.status(400).send(err)

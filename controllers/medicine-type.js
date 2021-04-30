@@ -1,18 +1,18 @@
-const parent = require('../models/Parent');
+const medicine_type = require('../models/MedicineType');
 
 const controller = { 
     create: async (req, res) => {
         try{
-            const item = await parent.create(req.body)
+            const item = await medicine_type.create(req.body)
             res.send(item)
         }catch(err){
             res.status(400).send(err)
         }
     },
-        // Ejemplo populate anidado: .populate({path:'childs', populate:{path:'parents'}})
+        
     read: async (req, res) => {
         try{
-            const items = await parent.find({}).populate(['childs'])
+            const items = await medicine_type.find({})
             res.send(items)
         }catch(err){
             res.status(400).send(err)
@@ -21,7 +21,7 @@ const controller = {
 
     readById: async (req, res) => {
         try{
-            const item = await parent.findById(req.params.id).populate(['childs'])
+            const item = await medicine_type.findById(req.params.id)
             return !item ? res.sendStatus(404) : res.send(item);
         }catch(err){
             res.status(400).send(err)
@@ -30,8 +30,7 @@ const controller = {
 
     updateById: async (req, res) => {
         try{
-            const item = await parent.findByIdAndUpdate(req.params.id, req.body, {new: true}) // {new: true} -> Trae el objeto ya actualizado
-            .populate(['childs']) 
+            const item = await medicine_type.findByIdAndUpdate(req.params.id, req.body, {new: true}) // {new: true} -> Trae el objeto ya actualizado
             return !item ? res.sendStatus(404) : res.send(item);
         }catch(err){
             res.status(400).send(err)
@@ -40,7 +39,7 @@ const controller = {
 
     deleteById: async (req, res) => {
         try{
-            const item = await parent.findByIdAndDelete(req.params.id)
+            const item = await medicine_type.findByIdAndDelete(req.params.id)
             return !item ? res.sendStatus(404) : res.sendStatus(200);
         }catch(err){
             res.status(400).send(err)
