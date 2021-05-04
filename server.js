@@ -32,6 +32,7 @@ routerConfig(app, '/stools-report', routes.stool_reportRoutes);
 routerConfig(app, '/stools-report-type', routes.stool_report_typeRoutes);
 routerConfig(app, '/stools-report-color', routes.stool_report_colorRoutes);
 routerConfig(app, '/tutorials', routes.tutorialRoutes);
+routerConfig(app, '/notifications', routes.notificationRoutes);
 
 
 const port = 3000;
