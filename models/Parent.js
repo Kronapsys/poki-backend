@@ -7,7 +7,7 @@ const ParentSchema = new Schema({
         type: String,
         required: true
     },
-    
+
     surname1: {
         type: String,
         required: true
@@ -46,6 +46,16 @@ const ParentSchema = new Schema({
     childs: [{
         type: Schema.Types.ObjectId,
         ref: 'Child'
+    }],
+
+    notifications: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Notification'
+    }],
+
+    tutorials: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Tutorial'
     }]
 
 });

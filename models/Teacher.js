@@ -61,7 +61,17 @@ const TeacherSchema = new Schema({
   childs: [{
       type: Schema.Types.ObjectId,
       ref: "Child",
-    }]  
+    }],
+
+  notifications: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Notification'
+  }],
+
+  tutorial: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Tutorial'
+}]
 
 });
 
