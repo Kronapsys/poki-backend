@@ -43,6 +43,11 @@ const ParentSchema = new Schema({
         required: true
     },
 
+    isTeacher: {
+        type: Boolean,
+        required: true
+    },
+
     childs: [{
         type: Schema.Types.ObjectId,
         ref: 'Child'

@@ -44,8 +44,12 @@ const TeacherSchema = new Schema({
   },
 
   photo: {
-    type: String,
-    //required: true,
+    type: String
+  },
+
+  isTeacher: {
+    type: Boolean,
+    required: true
   },
 
   degrees: [{
