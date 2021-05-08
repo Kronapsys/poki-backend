@@ -19,6 +19,7 @@ const stool_report_typeRoutes = require('./stools-report-type');
 const stool_report_colorRoutes = require('./stools-report-color');
 const tutorialRoutes = require('./tutorials');
 const notificationRoutes = require('./notifications');
+const authRoutes = require('./auths');
 
 
 module.exports = {parentRoutes, teacherRoutes, childRoutes, lack_of_assistanceRoutes,
@@ -26,5 +27,5 @@ module.exports = {parentRoutes, teacherRoutes, childRoutes, lack_of_assistanceRo
                   classroomRoutes, courseRoutes, eventRoutes, food_reportRoutes,
                   food_report_typeRoutes, incident_reportRoutes, incident_report_typeRoutes,
                   medicineRoutes, medicine_typeRoutes, stool_reportRoutes, stool_report_typeRoutes,
-                  stool_report_colorRoutes, tutorialRoutes, notificationRoutes
+                  stool_report_colorRoutes, tutorialRoutes, notificationRoutes, authRoutes
                 };

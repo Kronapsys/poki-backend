@@ -1,8 +1,11 @@
 const parent = require('../models/Parent');
+const bcrypt = require('bcrypt');
 
 const controller = { 
     create: async (req, res) => {
         try{
+            const pass = req.body.password;
+            req.body.password = await bcrypt.hash(req.body.password, 10);
             const item = await parent.create(req.body)
             res.send(item)
         }catch(err){

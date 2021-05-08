@@ -7,6 +7,7 @@ const routerConfig = require('./utils/routerConfig');
 const routes = require('./routes/routes'); // Aquí importamos el fichero de routes.js así tenemos todas las rutas con un único import
 const cors = require('./middlewares/cors');
 
+
 app.use(morgan('dev')); // Utilizamos el middleware de morgan (nos trae información de las peticiones)
 app.use(express.json()); // Fuerza que todo sea tipo json
 app.use(cors); // Utilizamos las políticas de cors
@@ -33,6 +34,7 @@ routerConfig(app, '/stools-report-type', routes.stool_report_typeRoutes);
 routerConfig(app, '/stools-report-color', routes.stool_report_colorRoutes);
 routerConfig(app, '/tutorials', routes.tutorialRoutes);
 routerConfig(app, '/notifications', routes.notificationRoutes);
+routerConfig(app, '/auths', routes.authRoutes);
 
 
 const port = 3000;
