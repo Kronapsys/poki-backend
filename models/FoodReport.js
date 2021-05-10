@@ -9,8 +9,9 @@ const FoodReportSchema = new Schema({
     }],
 
     type: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Child'
+        // type: Schema.Types.ObjectId,
+        // ref: 'FoodReportType'
+        type: String
     }],
 
     description: {
