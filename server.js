@@ -5,12 +5,12 @@ const app = express(); // Creamos el server
 
 const routerConfig = require('./utils/routerConfig');
 const routes = require('./routes/routes'); // Aquí importamos el fichero de routes.js así tenemos todas las rutas con un único import
-const cors = require('./middlewares/cors');
-
+// const cors = require('./middlewares/cors');
+const cors = require('cors');
 
 app.use(morgan('dev')); // Utilizamos el middleware de morgan (nos trae información de las peticiones)
 app.use(express.json()); // Fuerza que todo sea tipo json
-app.use(cors); // Utilizamos las políticas de cors
+app.use(cors()); // Utilizamos las políticas de cors
 
 // Indicamos en que endpoint se ejecutará los métodos del router
 routerConfig(app, '/parents', routes.parentRoutes);

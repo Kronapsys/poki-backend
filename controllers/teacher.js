@@ -15,7 +15,7 @@ const controller = {
 
     read: async (req, res) => {
         try{
-            const items = await teacher.find({})  
+            const items = await teacher.find({}).populate(['childs'])
             res.send(items)
         }catch(err){
             res.status(400).send(err)
@@ -24,7 +24,7 @@ const controller = {
 
     readById: async (req, res) => {
         try{
-            const item = await teacher.findById(req.params.id)  
+            const item = await teacher.findById(req.params.id).populate(['childs'])
             return !item ? res.sendStatus(404) : res.send(item);
         }catch(err){
             res.status(400).send(err)

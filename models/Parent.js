@@ -45,6 +45,7 @@ const ParentSchema = new Schema({
 
     isTeacher: {
         type: Boolean,
+        default: false,
         required: true
     },
 
