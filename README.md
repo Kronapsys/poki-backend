@@ -11,11 +11,9 @@ La API estará deployada en Heroku, si aún así prefieres descargarla y usarla 
 # Organización de la faena :
 
 He utilizado diferentes herramientas para organizarme: </br>
-Con AdobeXD hice un prototipado para hacerme una idea de que vistas iba a necesitar y como organizarlas </br>
-![adobeXD](https://i.imgur.com/HYt6UDV.png) </br>
+
 Utilicé MIRO para el diseño de la BBDD, pensar en los diagramas de flujo que podía tener mi APP, pensar en los colores que iba a utilizar, etc... ejemplos: </br>
 
-![colores](https://i.imgur.com/trcDblh.png) </br>
 ![diagrama_padres](https://i.imgur.com/B5PKkxg.png) </br>
 ![diagrama_profesores_1](https://i.imgur.com/12u9ECI.png) </br>
 ![diagrama_profesores_2](https://i.imgur.com/vMTi2cS.png) </br>
