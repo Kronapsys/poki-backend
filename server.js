@@ -39,6 +39,6 @@ routerConfig(app, '/auths', routes.authRoutes);
 
 
 const port = 3000;
-app.listen(port, ()=> {
+app.listen(process.env.PORT || port, ()=> {
     console.log('Server listen on port: ' + `${port}`)
 });
